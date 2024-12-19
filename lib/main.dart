@@ -15,7 +15,34 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      home: HomeScreen(),
+    );
+  }
+  
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Hi  Saeed !'),
+                  Image.asset('assets/img/icons/notification.png',width: 24, height: 24,),
+                ],
+              )
+            ],
+          )
+        ),
+      ),
     );
   }
 }
-
